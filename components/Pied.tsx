@@ -14,9 +14,6 @@ export default function Pied() {
               Une mission de coopération décentralisée conduite au bénéfice des communes du
               Bénin, autour du Salon des Maires et des Collectivités Locales de Paris.
             </p>
-            <p>
-              <Link href="/inscription">Inscrire ma commune</Link>
-            </p>
           </div>
 
           {blocs.map((bloc) => (

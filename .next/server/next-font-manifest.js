@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/vodoumboangelo/Documents/Da Costa/ANCB/app/layout\":[\"static/media/739b78589b4abee9-s.p.woff2\",\"static/media/3e68fbb477d90635-s.p.woff2\",\"static/media/1eedfae966de4e1c-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

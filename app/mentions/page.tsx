@@ -24,7 +24,7 @@ export default function Mentions() {
             selon les termes de leurs licences respectives. Elles ont été redimensionnées et
             compressées pour le web, sans autre modification.
           </p>
-          <ul className="credit-liste">
+          {/* <ul className="credit-liste">
             {CREDITS.map((credit) => (
               <li key={credit.fichier}>
                 <strong>{credit.titre}</strong> — {credit.auteur}, licence {credit.licence}.{" "}
@@ -33,7 +33,7 @@ export default function Mentions() {
                 </a>
               </li>
             ))}
-          </ul>
+          </ul> */}
 
           <h2 className="titre-section" style={{ marginTop: "3rem" }}>
             Marques et logotypes
