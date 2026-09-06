@@ -1,1 +1,31 @@
-node_modules
+cat > .gitignore << 'EOF'
+# dépendances
+node_modules/
+.pnp
+.pnp.js
+
+# build
+.next/
+out/
+build/
+dist/
+
+# environnement
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+EOF
