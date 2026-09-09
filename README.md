@@ -14,19 +14,35 @@ npm run dev
 
 Le site tourne sur http://localhost:3000. Pour vérifier le rendu de production : `npm run build && npm start`.
 
-## Brancher le formulaire Google
+## Brancher l'envoi des inscriptions par courriel
 
-1. Créez le formulaire dans Google Forms avec les champs listés dans `lib/contenu.ts` (`CHAMPS_FORMULAIRE`).
-2. Cliquez sur **Envoyer**, puis sur l'onglet **< >**, et copiez l'adresse contenue dans `src="…"` (elle finit par `?embedded=true`).
-3. Renseignez-la dans `.env.local` :
+Le formulaire de `/inscription` poste vers la route `app/api/inscription/route.ts`, qui envoie
+deux courriels via l'API HTTP de [Resend](https://resend.com) : le récapitulatif au secrétariat
+de la mission, et un accusé de réception à la commune. Aucune dépendance npm supplémentaire.
+
+1. Créez un compte Resend et **vérifiez le domaine** du site (Domains > Add Domain, puis les
+   enregistrements DNS SPF/DKIM fournis).
+2. Générez une clé API, puis renseignez `.env.local` :
 
    ```
-   NEXT_PUBLIC_GOOGLE_FORM_URL=https://docs.google.com/forms/d/e/…/viewform?embedded=true
+   RESEND_API_KEY=re_…
+   MAIL_DESTINATAIRE=rsb.dacosta@gmail.com
+   MAIL_EXPEDITEUR="Mission SMCL <inscription@votre-domaine.fr>"
    ```
 
-4. En production, déclarez la même variable dans les réglages de l'hébergeur (Vercel, Netlify, etc.), puis redéployez.
+3. En production, déclarez les trois mêmes variables dans les réglages de l'hébergeur
+   (Vercel : Settings > Environment Variables), puis redéployez.
 
-Tant que la variable est vide, la page `/inscription` affiche le mode d'emploi et la liste des champs recommandés à la place du formulaire. Aucune erreur, aucun écran blanc.
+`MAIL_EXPEDITEUR` doit utiliser un domaine vérifié chez Resend. L'adresse de test
+`onboarding@resend.dev` fonctionne sans domaine, mais n'écrit qu'au propriétaire du compte.
+
+Tant que `RESEND_API_KEY` est vide, l'envoi renvoie une erreur explicite et le formulaire invite
+à télécharger le bulletin PDF et à le retourner par courriel. Aucun écran blanc, aucune perte
+d'inscription silencieuse.
+
+Le destinataire, l'expéditeur et le contenu des courriels sont dans
+`app/api/inscription/route.ts` ; les champs et les listes de choix viennent de `FICHE` dans
+`lib/contenu.ts`.
 
 ## Modifier le contenu
 
@@ -45,11 +61,13 @@ app/
   programme/            les trois séquences + séance tripartite
   accompagnement/       trois piliers, calendrier, recommandations
   financements/         FICOL, DAECT, dispositifs européens, réseaux
-  inscription/          formulaire Google ou mode d'emploi
+  inscription/          formulaire en ligne + bulletin PDF
+  api/inscription/      route d'envoi des inscriptions par courriel
   mentions/             crédits photo, marques, données personnelles
   not-found.tsx
 components/
-  Entete, Pied, Rebours, Piliers, Illustration, EnteteDePage, AppelInscription
+  Entete, Pied, Rebours, Piliers, Illustration, EnteteDePage, AppelInscription,
+  FormulaireInscription
 lib/contenu.ts          tout le contenu éditorial
 public/img/             six photographies libres de droits
 ```
@@ -62,12 +80,13 @@ Toutes les pages sont statiques (`○ Static` au build). Vercel fonctionne sans 
 
 ## Images
 
-Six photographies issues de Wikimedia Commons, sous licences CC0 et CC BY-SA 4.0. Les crédits apparaissent sous chaque image et sur `/mentions` : les conserver est une condition des licences.
+Cinq photographies issues de Wikimedia Commons, sous licences CC0 et CC BY-SA 4.0. Les crédits apparaissent sous chaque image et sur `/mentions` : les conserver est une condition des licences.
 
 Aucun logotype de l'ANCB, du Salon des Maires, de l'AMF ou de l'AFD n'est utilisé. Si vous obtenez une autorisation d'usage, ajoutez-les et adaptez le paragraphe correspondant de `/mentions`.
 
 ## À vérifier avant mise en ligne
 
-- Les coordonnées du pied de page, reprises des plaquettes SAV+ (`CONTACTS` dans `lib/contenu.ts`).
-- La date exacte et le lieu de la séance tripartite, encore à confirmer.
-- Le chevauchement entre l'atelier international (18–20 nov.) et la journée de la coopération (20 nov.).
+- Les coordonnées du pied de page : Cabinet FM Consulting (Cotonou) et relais Paris (`CONTACTS` dans `lib/contenu.ts`).
+- La date exacte et le lieu de la séance tripartite (25, 26 ou 27 novembre), encore à confirmer.
+- La fiche d'inscription PDF (`public/documents/`) et l'adresse de retour indiquée sur le bulletin.
+- La clé `RESEND_API_KEY` et le domaine d'envoi : sans eux, le formulaire en ligne n'envoie rien.

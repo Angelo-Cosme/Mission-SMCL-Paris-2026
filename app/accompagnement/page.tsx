@@ -2,28 +2,81 @@ import type { Metadata } from "next";
 import AppelInscription from "@/components/AppelInscription";
 import EnteteDePage from "@/components/EnteteDePage";
 import Illustration from "@/components/Illustration";
-import Piliers from "@/components/Piliers";
-import { CALENDRIER, PILIERS_DETAILLES } from "@/lib/contenu";
+import { ACCOMPAGNEMENT, CALENDRIER } from "@/lib/contenu";
 
 export const metadata: Metadata = {
   title: "Accompagnement",
   description:
-    "Le dispositif d'accompagnement des communes béninoises : ingénierie de projet, diplomatie territoriale, suivi des cofinancements, et calendrier de septembre à décembre 2026.",
+    "Accompagnement stratégique des 77 communes du Bénin vers le SMCL Paris 2026 : positionnement, objectifs, feuille de route d'août à novembre 2026 et points focaux de la séance tripartite.",
 };
+
+const { positionnement, objectifs, feuilleDeRoute, pointsFocaux } = ACCOMPAGNEMENT;
 
 export default function Accompagnement() {
   return (
     <>
       <EnteteDePage
-        surtitre="Septembre à décembre 2026"
-        titre="Un accompagnement qui commence avant le départ et continue après le retour"
-        chapeau="Le déplacement à Paris n'est que la partie visible. L'essentiel du travail se fait en amont, sur les dossiers, et en aval, sur les conventions."
+        surtitre="Accompagnement stratégique"
+        titre={ACCOMPAGNEMENT.titre}
       />
 
       <section className="section">
         <div className="enveloppe">
-          <h2 className="titre-section">Trois piliers</h2>
-          <Piliers piliers={PILIERS_DETAILLES} />
+          <h2 className="titre-section">{positionnement.titre}</h2>
+          <p className="intro">{positionnement.texte}</p>
+
+          <div className="encadre mesure-large">
+            <h3>{objectifs.titre}</h3>
+            <ul className="liste-puces">
+              {objectifs.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-claire">
+        <div className="enveloppe">
+          <h2 className="titre-section">{feuilleDeRoute.titre}</h2>
+          <p className="intro">{feuilleDeRoute.periode}</p>
+
+          <div className="piliers">
+            {feuilleDeRoute.phases.map((phase) => (
+              <article className="pilier" key={phase.numero}>
+                <p className="pilier-etiquette">
+                  {phase.numero} · {phase.periode}
+                </p>
+                <h3>{phase.titre}</h3>
+                <ul className="liste-puces">
+                  {phase.points.map((point) => (
+                    <li key={point.texte}>
+                      {point.fort && (
+                        <>
+                          <strong>{point.fort}</strong> —{" "}
+                        </>
+                      )}
+                      {point.texte}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="enveloppe">
+          <h2 className="titre-section">{pointsFocaux.titre}</h2>
+          <p className="intro">{pointsFocaux.chapeau}</p>
+          <ol className="liste-numerotee mesure-large">
+            {pointsFocaux.points.map((point) => (
+              <li key={point.texte}>
+                <strong>{point.fort}</strong> — {point.texte}
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -90,7 +143,7 @@ export default function Accompagnement() {
 
       <AppelInscription
         titre="La préparation commence à l'inscription"
-        texte="Le formulaire recueille les informations nécessaires au diagnostic initial de votre commune. C'est la première pièce du dossier."
+        texte="La fiche d'inscription recueille les informations nécessaires au diagnostic initial de votre commune. C'est la première pièce du dossier."
       />
     </>
   );

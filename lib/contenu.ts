@@ -4,25 +4,35 @@
  */
 
 export const MISSION = {
-  nom: "Mission SMCL Paris 2026",
+  nom: "Mission SMCL",
+  nomComplet: "Mission SMCL (Salon des Maires et des Collectivités Locales)",
   sousTitre: "Coopération décentralisée Bénin · France",
+  lieuDate: "Paris, 24 au 29 novembre 2026",
+  sigle: "SMCL",
+  definition: "Salon des Maires et des Collectivités Locales",
+  operateur: "FM Consulting",
+  logo: "/img/logo-fm-consulting.png",
   dateOuvertureSalon: "2026-11-24T09:00:00+01:00",
 };
 
 export const CONTACTS = {
   benin: {
-    titre: "Secrétariat au Bénin",
-    adresse: "08 BP 0053, Cotonou",
-    telephone: "+229 53 22 20 98",
-    telephoneLien: "+22953222098",
-    courriel: "contact@savplus.net",
+    titre: "Cabinet FM Consulting · Cotonou",
+    adresse:
+      "Îlot 153-154, Parcelle A – 1er arrondissement – Quartier Avlékété-Jonquet – Cotonou – Bénin",
+    boitePostale: "03 BP 1672 Cotonou",
+    telephone: "+229 01 97 50 69 64",
+    telephoneLien: "+2290197506964",
+    courriel: "cabinetfmconsulting25@gmail.com",
   },
   france: {
-    titre: "Relais en France",
-    adresse: "38 rue Paul Lafargue, 93160 Noisy-le-Grand",
-    telephone: "+33 1 48 15 36 67",
-    telephoneLien: "+33148153667",
-    courriel: "contact@savplusformation.fr",
+    titre: "Relais à Paris",
+    nom: "Romain Da Costa",
+    role: "Expert en développement territorial",
+    adresse: "42, avenue de la République – 93110 Rosny-sous-Bois",
+    telephone: "+33 6 63 96 76 47",
+    telephoneLien: "+33663967647",
+    courriel: "rsb.dacosta@gmail.com",
   },
 };
 
@@ -34,16 +44,16 @@ export const NAVIGATION = [
 ];
 
 export const RAIL = [
-  { date: "18–20 nov.", libelle: "Atelier international, 25 heures de formation" },
-  { date: "20 nov.", libelle: "Journée de la coopération et de la diaspora" },
-  { date: "24–26 nov.", libelle: "Salon des Maires et des Collectivités Locales" },
-  { date: "En marge", libelle: "Séance tripartite au Quai d'Orsay" },
+  { date: "24–26 nov.", libelle: "Salon des Maires, Paris Expo Porte de Versailles" },
+  { date: "25, 26 ou 27 nov.", libelle: "Séance de travail tripartite ANCB · Ambassade · MEAE" },
+  { date: "En marge", libelle: "Rendez-vous B2B avec les collectivités françaises" },
+  { date: "24–29 nov.", libelle: "Rencontres AMF et Cités Unies France" },
 ];
 
 export const CHIFFRES = [
   { valeur: "77", libelle: "communes du Bénin concernées" },
   { valeur: "+1000", libelle: "élus et décideurs présents au salon" },
-  { valeur: "25 h", libelle: "de formation à l'ingénierie de coopération" },
+  { valeur: "3 j", libelle: "de salon Porte de Versailles" },
   { valeur: "1 M€", libelle: "plafond indicatif d'un projet FICOL" },
 ];
 
@@ -65,84 +75,150 @@ export const PILIERS = [
   },
 ];
 
-export const PILIERS_DETAILLES = [
-  {
-    titre: "Ingénierie de projet",
+/* ---------- Page Accompagnement ---------- */
+
+export type Point = { fort?: string; texte: string };
+
+export const ACCOMPAGNEMENT = {
+  titre: "Cap sur le SMCL Paris 2026 et la coopération franco-béninoise",
+  positionnement: {
+    titre: "Positionnement et expertise",
     texte:
-      "Diagnostic des besoins de la commune, élaboration des fiches de projets de coopération, constitution des dossiers de partenariat et chiffrage réaliste des contreparties locales.",
+      "Ancien cadre dirigeant de la fonction publique territoriale française, je mets mon expertise institutionnelle, mon réseau et ma connaissance fine des rouages de la coopération décentralisée au service des 77 communes du Bénin.",
   },
-  {
-    titre: "Diplomatie et réseaux",
-    texte:
-      "Facilitation des accès auprès du MEAE, de l'Ambassade du Bénin à Paris, de l'Association des Maires de France, des conseils régionaux et départementaux français.",
+  objectifs: {
+    titre: "Objectifs clés",
+    points: [
+      "Structurer et sécuriser des partenariats de coopération décentralisée pérennes et mutuellement bénéfiques.",
+      "Maximiser la visibilité internationale des communes béninoises lors du Salon des Maires et des Collectivités Locales à Paris en novembre 2026.",
+      "Mobiliser des financements et des ressources techniques auprès des bailleurs et des réseaux français.",
+    ],
   },
-  {
-    titre: "Suivi et pérennisation",
-    texte:
-      "Formalisation des conventions de partenariat, montage des requêtes de cofinancement FICOL et DAECT, suivi des dossiers après le salon.",
+  feuilleDeRoute: {
+    titre: "Feuille de route de la mission",
+    periode: "Août – novembre 2026",
+    phases: [
+      {
+        numero: "Phase 1",
+        periode: "Août – septembre 2026",
+        titre: "Mobilisation et inscription",
+        points: [
+          { texte: "Restitution des besoins des communes béninoises après le renouvellement de l'ANCB." },
+          { texte: "Lancement officiel de la délégation béninoise pour le SMCL 2026." },
+          {
+            texte:
+              "Identification des thématiques prioritaires : transition écologique, développement économique local, services de base.",
+          },
+        ] as Point[],
+      },
+      {
+        numero: "Phase 2",
+        periode: "Septembre – octobre 2026",
+        titre: "Préparation des rencontres clés",
+        points: [
+          {
+            fort: "Association des Maires de France (AMF)",
+            texte: "cadrage politique du rapprochement ANCB-AMF et entretien avec la présidence.",
+          },
+          {
+            fort: "Cités Unies France (CUF)",
+            texte: "organisation d'une session dédiée au groupe pays Bénin.",
+          },
+          {
+            fort: "Séquence institutionnelle",
+            texte:
+              "coordination avec l'Ambassade du Bénin en France et la Délégation pour l'action extérieure des collectivités territoriales (DAECT) du MEAE.",
+          },
+        ] as Point[],
+      },
+      {
+        numero: "Phase 3",
+        periode: "Novembre 2026",
+        titre: "Déploiement à Paris",
+        points: [
+          { texte: "Animation du stand et de l'espace ANCB au SMCL." },
+          {
+            texte:
+              "Séance de travail tripartite : maires du Bénin, Ambassade du Bénin et Directeur de la coopération décentralisée (MEAE).",
+          },
+          {
+            fort: "B2B et matchmaking",
+            texte: "mises en relation ciblées avec des collectivités françaises souhaitant s'engager au Bénin.",
+          },
+        ] as Point[],
+      },
+    ],
   },
-];
+  pointsFocaux: {
+    titre: "Points focaux de la séance de travail tripartite",
+    chapeau: "Trois sujets structurent la demi-journée parisienne.",
+    points: [
+      {
+        fort: "Diplomatie territoriale",
+        texte:
+          "alignement stratégique entre la politique étrangère béninoise et l'action extérieure des collectivités françaises.",
+      },
+      {
+        fort: "Cofinancements",
+        texte:
+          "mobilisation du FICOL (Facility for Local Authorities) géré par l'AFD et des fonds d'appui de la DAECT.",
+      },
+      {
+        fort: "Pérennisation",
+        texte: "signature d'une feuille de route commune d'accompagnement technique après le SMCL.",
+      },
+    ] as Point[],
+  },
+};
+
+/* ---------- Page Programme ---------- */
 
 export type Sequence = {
   date: string;
   etiquette: string;
   titre: string;
   chapeau: string;
-  points: { fort?: string; texte: string }[];
+  points: Point[];
 };
 
 export const SEQUENCES: Sequence[] = [
   {
-    date: "18 – 20 novembre",
-    etiquette: "Atelier international",
-    titre: "Trois modules pour bâtir des ponts territoriaux",
-    chapeau:
-      "Vingt-cinq heures de formation destinées aux élus et aux cadres techniques, organisées autour de trois axes et six activités clés.",
-    points: [
-      {
-        fort: "Montage de projet de coopération",
-        texte:
-          "cadre institutionnel et juridique, dispositifs légaux, acteurs clés, méthodes et outils de montage.",
-      },
-      {
-        fort: "Mobilisation des financements internationaux",
-        texte:
-          "cartographie des bailleurs, appels à projets, fonds européens, gouvernance et suivi-évaluation des partenariats.",
-      },
-      {
-        fort: "Marketing territorial et communication digitale",
-        texte:
-          "identifier et promouvoir les atouts économiques et sociaux de la commune, stratégies numériques au service de l'attractivité.",
-      },
-    ],
-  },
-  {
-    date: "20 novembre",
-    etiquette: "Journée de la coopération",
-    titre: "Rencontres, réseautage et partenariats concrets",
-    chapeau:
-      "Une journée entière consacrée à la mise en relation entre les collectivités béninoises, les acteurs de la diaspora en France et les partenaires techniques et financiers. Plus de cent participants attendus.",
-    points: [
-      { texte: "Présentation des projets prioritaires portés par les communes en quête de partenaires." },
-      { texte: "Rencontres avec les associations de la diaspora béninoise en France." },
-      { texte: "Échanges bilatéraux structurés entre élus et techniciens." },
-      {
-        texte:
-          "Table ronde avec les agences de développement, bailleurs bilatéraux et organisations multilatérales.",
-      },
-    ],
-  },
-  {
     date: "24 – 26 novembre",
-    etiquette: "Salon des Maires",
-    titre: "Trois jours au cœur du rendez-vous national des élus français",
+    etiquette: "Porte de Versailles",
+    titre: "Salon des Maires et des Collectivités Locales",
     chapeau:
-      "Le Salon des Maires et des Collectivités Locales réunit plus de mille élus et décideurs. La délégation y dispose d'un espace de représentation et d'un agenda de rendez-vous préparé en amont.",
+      "Trois jours au contact des réalités de la gestion des communes et des territoires français, à Paris Expo Porte de Versailles.",
     points: [
-      { texte: "Espace dédié à la coopération décentralisée et aux partenariats internationaux." },
-      { texte: "Rendez-vous bilatéraux avec des maires et décideurs territoriaux français." },
-      { texte: "Accès aux conférences et forums thématiques du salon." },
-      { texte: "Mise en avant des projets de coopération portés par les communes de la délégation." },
+      { texte: "Participation aux travaux, conférences et ateliers du Congrès des Maires." },
+      { texte: "Visite du Salon des Maires." },
+      { texte: "Rencontres avec les entreprises et les institutions." },
+      { texte: "Rendez-vous avec les maires et les décideurs territoriaux." },
+      {
+        texte:
+          "Temps d'échange avec le président de l'Association des Maires de France.",
+      },
+    ],
+  },
+  {
+    date: "25, 26 ou 27 novembre",
+    etiquette: "En marge du salon",
+    titre: "Séance de travail tripartite",
+    chapeau:
+      "Une demi-journée au ministère de l'Europe et des Affaires étrangères ou à l'Ambassade du Bénin en France, dans le cadre de la mission des maires du Bénin à Paris.",
+    points: [
+      {
+        fort: "Délégation béninoise",
+        texte: "bureau de l'ANCB et maires des communes du Bénin.",
+      },
+      {
+        fort: "Partie diplomatique",
+        texte: "l'Ambassadeur du Bénin en France et ses conseillers diplomatiques.",
+      },
+      {
+        fort: "Partie française",
+        texte:
+          "le Directeur de la coopération décentralisée, délégué pour l'action extérieure des collectivités territoriales (DAECT / MEAE), et les chargés de mission Afrique.",
+      },
     ],
   },
 ];
@@ -205,7 +281,7 @@ export const CALENDRIER = [
     etiquette: "Déploiement",
     titre: "La délégation à Paris",
     texte:
-      "Atelier international, journée de la coopération, séance tripartite au Quai d'Orsay et trois jours de Salon des Maires.",
+      "Trois jours de Salon des Maires, séance de travail tripartite au ministère de l'Europe et des Affaires étrangères et rendez-vous bilatéraux avec les collectivités françaises.",
     livrable: "Déclarations d'intention et accords d'engagement partenarial.",
   },
   {
@@ -254,24 +330,85 @@ export const RESEAUX = [
   },
 ];
 
-export const CHAMPS_FORMULAIRE = [
-  "Commune ou collectivité",
-  "Département",
-  "Nom et prénom du participant",
-  "Fonction exercée",
-  "Adresse électronique",
-  "Téléphone et WhatsApp",
-  "Séquences souhaitées (atelier, journée de la coopération, salon)",
-  "Nombre de personnes de la commune",
-  "Thématiques prioritaires",
-  "Projets à présenter à Paris",
-  "Budget indicatif de chaque projet",
-  "Partenariats ou jumelages existants",
-  "Passeport en cours de validité et date d'expiration",
-  "Besoin d'appui pour les démarches de visa",
-  "Langue de travail souhaitée",
-  "Personne référente pour le suivi du dossier",
-];
+/* ---------- Fiche d'inscription (bulletin officiel ANCB) ---------- */
+
+export const FICHE = {
+  fichier: "/documents/fiche-inscription-smcl-paris-2026.pdf",
+  organisme: "Association Nationale des Communes du Bénin (ANCB)",
+  titre: "Bulletin officiel d'inscription et des intentions de coopération",
+  mission:
+    "Mission institutionnelle « Cap sur le SMCL Paris & Réseaux de Coopération Décentralisée » — Paris, novembre 2026",
+  note:
+    "Ce formulaire enregistre la participation de votre commune à la délégation officielle de l'ANCB pour le Salon des Maires et des Collectivités Locales 2026 à Paris, et recense vos priorités de développement local afin de structurer les rendez-vous B2B et la séance de travail avec le ministère de l'Europe et des Affaires étrangères et l'Ambassade du Bénin.",
+  retour: {
+    avant: "30 septembre 2026",
+    destinataire: "Secrétariat permanent de l'ANCB",
+    courriel: "contact@ancb.bj",
+    copie: "cabinetfmconsulting25@gmail.com",
+  },
+  identification: [
+    "Commune",
+    "Département",
+    "Nom et prénom du maire ou du représentant",
+    "Qualité : maire, adjoint au maire ou président d'intercommunalité",
+    "Téléphone mobile (WhatsApp)",
+    "Adresse électronique officielle",
+    "Nom et contact du focal technique (SG / DST)",
+  ],
+  cooperation: {
+    question:
+      "Avez-vous actuellement un partenariat de coopération décentralisée ou un jumelage actif ?",
+    reponses: ["Oui", "Non, aucun partenariat actif", "Partenariat en cours de négociation"],
+    precision: "Si oui ou en cours, préciser la ou les collectivités partenaires (nom, pays).",
+  },
+  domaines: {
+    consigne: "Deux choix maximum, à défendre lors des rendez-vous B2B à Paris.",
+    liste: [
+      "Eau potable, assainissement et gestion des déchets",
+      "Numérisation, énergie solaire et services urbains",
+      "Développement économique local, agriculture et marchés",
+      "Patrimoine, tourisme local et échanges culturels",
+      "Santé communautaire, éducation et jeunesse",
+      "Renforcement des capacités et formation des agents",
+    ],
+  },
+  projet: [
+    "Titre du projet prioritaire de la commune",
+    "Objectif principal et bénéficiaires attendus",
+    "Estimation du budget global du projet, si disponible",
+  ],
+  sequences: [
+    {
+      fort: "Présence aux travaux du congrès et au SMCL",
+      texte: "rendez-vous B2B programmés.",
+    },
+    {
+      fort: "Séance tripartite au MEAE",
+      texte: "maires de l'ANCB, Ambassade du Bénin et DAECT du ministère des Affaires étrangères.",
+    },
+    {
+      fort: "Rencontre officielle AMF et Cités Unies France",
+      texte: "réseaux d'élus et groupe pays Bénin.",
+    },
+  ] as Point[],
+  frais: {
+    montant: "2 000 €",
+    unite: "par personne",
+    inclus: [
+      "Entrée au congrès et participation aux travaux des maires et décideurs territoriaux.",
+      "Visite de l'exposition SMCL.",
+      "Participation à la réunion tripartite ANCB et élus béninois / MEAE / Ambassade du Bénin à Paris.",
+      "Rencontre avec l'AMF.",
+    ],
+    reglement: "Règlement au Cabinet FM Consulting, par virement ou par chèque.",
+    echeancier: [
+      "50 % à l'inscription.",
+      "Solde au plus tard le 30 octobre, après confirmation et validation des rendez-vous officiels.",
+    ],
+  },
+  engagement:
+    "Le maire confirme l'intérêt officiel de sa commune à intégrer la délégation officielle de l'ANCB pour le SMCL Paris 2026, et mandate l'ANCB et son cabinet-conseil pour organiser les rendez-vous institutionnels et partenariaux afférents. La fiche est datée, signée et revêtue du cachet de la commune.",
+};
 
 export type Credit = {
   fichier: string;
@@ -302,13 +439,6 @@ export const CREDITS: Credit[] = [
     auteur: "Jebulon",
     licence: "CC0",
     page: "https://commons.wikimedia.org/wiki/File:Minist%C3%A8re_fran%C3%A7ais_des_Affaires_Etrang%C3%A8res_et_Europ%C3%A9ennes_Quai_d%27Orsay_Paris.jpg",
-  },
-  {
-    fichier: "salon-stand.jpg",
-    titre: "Stand d'exposition dans un salon professionnel (photo d'illustration)",
-    auteur: "Silverije",
-    licence: "CC BY-SA 4.0",
-    page: "https://commons.wikimedia.org/wiki/File:MESAP_2017._-_%C5%A1tand_Turisti%C4%8Dke_zajednice_Me%C4%91imurske_%C5%BEupanije.jpg",
   },
   {
     fichier: "assemblee-benin.jpg",

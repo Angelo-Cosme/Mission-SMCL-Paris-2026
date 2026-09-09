@@ -4,7 +4,7 @@ import AppelInscription from "@/components/AppelInscription";
 import Illustration from "@/components/Illustration";
 import Piliers from "@/components/Piliers";
 import Rebours from "@/components/Rebours";
-import { CHIFFRES, PILIERS, RAIL } from "@/lib/contenu";
+import { CHIFFRES, MISSION, PILIERS, RAIL } from "@/lib/contenu";
 
 export default function Accueil() {
   return (
@@ -21,16 +21,9 @@ export default function Accueil() {
           />
         </div>
         <div className="enveloppe">
-          <p className="surtitre">Paris, novembre 2026</p>
-          <h1>
-            Les communes du Bénin prennent place au plus grand rendez-vous des élus
-            d&rsquo;Europe
-          </h1>
-          <p className="chapeau">
-            Une délégation, trois séquences de travail et une séance institutionnelle au plus
-            haut niveau pour transformer un déplacement en partenariats signés et en
-            financements mobilisés.
-          </p>
+          <p className="surtitre">{MISSION.lieuDate}</p>
+          <h1>{MISSION.nomComplet}</h1>
+          <p className="heros-sous">{MISSION.sousTitre}</p>
           <div className="actions">
             <Link className="bouton" href="/inscription">
               Inscrire ma commune
@@ -84,7 +77,7 @@ export default function Accueil() {
         </div>
       </section>
 
-      <section className="section section-verte">
+      <section className="section section-bleue">
         <div className="enveloppe">
           <h2 className="titre-section">Ce que représente le rendez-vous</h2>
           <p className="intro">

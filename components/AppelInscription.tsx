@@ -8,7 +8,7 @@ export default function AppelInscription({
   texte: string;
 }) {
   return (
-    <section className="section section-verte">
+    <section className="section section-bleue">
       <div className="enveloppe">
         <h2 className="titre-section">{titre}</h2>
         <p className="intro">{texte}</p>

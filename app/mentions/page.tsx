@@ -50,10 +50,10 @@ export default function Mentions() {
             Données personnelles
           </h2>
           <p>
-            Les informations transmises par le formulaire d&rsquo;inscription sont collectées via
-            Google Forms et utilisées uniquement pour la préparation de la mission. Elles ne sont
-            ni cédées ni vendues à des tiers. Pour exercer un droit d&rsquo;accès, de
-            rectification ou de suppression, écrivez à{" "}
+            Les informations transmises par la fiche d&rsquo;inscription, retournée par courriel
+            ou saisie dans le formulaire en ligne, sont utilisées uniquement pour la préparation
+            de la mission. Elles ne sont ni cédées ni vendues à des tiers. Pour exercer un droit
+            d&rsquo;accès, de rectification ou de suppression, écrivez à{" "}
             <a href={`mailto:${CONTACTS.benin.courriel}`}>{CONTACTS.benin.courriel}</a>.
           </p>
 

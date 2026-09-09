@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -19,9 +20,15 @@ export default function Entete() {
   return (
     <header className="entete">
       <div className="enveloppe">
-        <Link className="marque" href="/">
-          {MISSION.nom}
-          <span>{MISSION.sousTitre}</span>
+        <Link className="marque" href="/" aria-label={`${MISSION.nom} — accueil`}>
+          <Image
+            className="marque-logo"
+            src={MISSION.logo}
+            alt={MISSION.operateur}
+            width={758}
+            height={310}
+            priority
+          />
         </Link>
 
         <button
