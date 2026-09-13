@@ -134,7 +134,7 @@ export default function Accompagnement() {
               </p>
             </div>
             <Illustration
-              fichier="assemblee-benin.jpg"
+              fichier="ancb-benin.jpg"
               alt="Bâtiment de l'Assemblée nationale du Bénin"
             />
           </div>

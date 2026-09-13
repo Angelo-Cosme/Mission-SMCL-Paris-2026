@@ -52,21 +52,26 @@ export default function Accueil() {
           <div className="duo">
             <div className="duo-texte">
               <h2 className="titre-section">
-                Pourquoi une commune béninoise a intérêt à être à Paris en novembre
+                Rendez-vous au SMCL
+                {/* Pourquoi une commune béninoise a intérêt à être à Paris en novembre */}
               </h2>
               <p>
-                La coopération décentralisée n&rsquo;est plus réservée à quelques communes déjà
-                jumelées. C&rsquo;est aujourd&rsquo;hui un canal de financement direct pour
-                l&rsquo;eau, l&rsquo;assainissement, la gestion des déchets, la numérisation des
-                services et le développement économique local.
+                Avec <strong>1 300 exposants </strong> et <strong>400 conférences et animations</strong>, le Salon des Maires et des
+                collectivités Locales offrent des rendez-vous incontournables qui couvrent l’ensemble
+                des enjeux des collectivités : <strong>construction et aménagement</strong>, <strong>transports et mobilité</strong>,
+                <strong>environnement et cadre de vie</strong>, <strong>sécurité, prévention et protection</strong>, <strong>culture, loisirs et
+                événements</strong>, <strong>énergie et climat</strong>, <strong>numérique et connectivité</strong>, <strong>santé</strong>, <strong>social</strong>, <strong>enfance et
+                vivre ensemble</strong>, <strong>développement</strong>, <strong>attractivité et cohésion territoriales</strong>, <strong>sports et
+                parasports</strong>, <strong>biodiversité</strong>. Un cadre unique pour s’inspirer, échanger et faire avancer les
+                projets des territoires.
               </p>
-              <p>
+              {/* <p>
                 Encore faut-il arriver préparé. Un maire qui se présente avec une fiche-projet
                 chiffrée, un cofinancement identifié et un interlocuteur français déjà rencontré
                 repart avec une déclaration d&rsquo;intention. Un maire qui découvre le salon sur
                 place repart avec des cartes de visite.
-              </p>
-              <p>Cette mission existe pour que les communes béninoises soient dans le premier cas.</p>
+              </p> */}
+              {/* <p>Cette mission existe pour que les communes béninoises soient dans le premier cas.</p> */}
             </div>
             <Illustration
               fichier="cotonou-cadjehoun.jpg"
@@ -120,11 +125,12 @@ export default function Accueil() {
               hauteur={973}
             />
             <div className="duo-texte">
-              <h2 className="titre-section">Une séance de travail au niveau de l&rsquo;État</h2>
+              <h2 className="titre-section">Une séance de travail avec les
+                acteurs de la coopération décentralisée</h2>
               <p>
-                En marge du salon, une demi-journée réunira les maires de la délégation,
-                l&rsquo;Ambassade du Bénin en France et la Direction de la coopération
-                décentralisée du ministère français de l&rsquo;Europe et des Affaires étrangères.
+                Le bureau de l’ANCB et les maires de la délégation ; l’Ambassadeur du Bénin
+                en France et ses conseillers diplomatiques ; le Directeur de la coopération
+                décentralisée et les chargés de mission Afrique de la DCTCIV.
               </p>
               <p>
                 L&rsquo;objet est précis : aligner les priorités des plans de développement

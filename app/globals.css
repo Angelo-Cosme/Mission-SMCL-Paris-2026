@@ -58,6 +58,7 @@ img{max-width:100%;display:block}
 .nav a[aria-current="page"]{border-bottom-color:var(--cyan);color:var(--bleu);font-weight:700}
 .nav .bouton-nav{background:var(--cyan);color:#fff;padding:.55rem 1.05rem;border-radius:3px;font-weight:700;border-bottom:none}
 .nav .bouton-nav:hover{background:var(--bleu);border-bottom-color:transparent}
+.nav .bouton-nav:hover{color:#fff}
 .bascule{display:none;margin-left:auto;background:none;border:1px solid var(--ligne);color:var(--encre);font:inherit;font-size:.9rem;padding:.45rem .8rem;border-radius:3px;cursor:pointer}
 @media (max-width:860px){
   .bascule{display:block}

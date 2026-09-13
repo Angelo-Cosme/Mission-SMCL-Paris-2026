@@ -136,7 +136,7 @@ export default function FormulaireInscription() {
         </div>
 
         <p className="champ">
-          <label htmlFor="focal">Nom et contact du focal technique (SG / DST)</label>
+          <label htmlFor="focal">Nom et contact du focal technique (SE / DST)</label>
           <input id="focal" name="focal" type="text" autoComplete="off" />
         </p>
       </fieldset>

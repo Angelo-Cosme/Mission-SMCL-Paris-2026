@@ -41,6 +41,7 @@ export const NAVIGATION = [
   { href: "/programme", libelle: "Programme" },
   { href: "/accompagnement", libelle: "Accompagnement" },
   { href: "/financements", libelle: "Financements" },
+  { href: "https://mediaproduct.fr/actus/salons-professionnels/le-salon-des-maires-smcl/", libelle: "Découvrir le salon" },
 ];
 
 export const RAIL = [
@@ -84,7 +85,7 @@ export const ACCOMPAGNEMENT = {
   positionnement: {
     titre: "Positionnement et expertise",
     texte:
-      "Ancien cadre dirigeant de la fonction publique territoriale française, je mets mon expertise institutionnelle, mon réseau et ma connaissance fine des rouages de la coopération décentralisée au service des 77 communes du Bénin.",
+      "Le cabinet FM consulting met l’expertise institutionnelle, le réseau et la connaissance fine des rouages de la coopération décentralisée d’un ancien cadre dirigeant de la fonction publique territoriale française, au service des 77 communes du Bénin.",
   },
   objectifs: {
     titre: "Objectifs clés",
@@ -393,7 +394,7 @@ export const FICHE = {
   ] as Point[],
   frais: {
     montant: "2 000 €",
-    unite: "par personne",
+    unite: "pour une délégation de 2 personnes",
     inclus: [
       "Entrée au congrès et participation aux travaux des maires et décideurs territoriaux.",
       "Visite de l'exposition SMCL.",
@@ -441,9 +442,9 @@ export const CREDITS: Credit[] = [
     page: "https://commons.wikimedia.org/wiki/File:Minist%C3%A8re_fran%C3%A7ais_des_Affaires_Etrang%C3%A8res_et_Europ%C3%A9ennes_Quai_d%27Orsay_Paris.jpg",
   },
   {
-    fichier: "assemblee-benin.jpg",
-    titre: "Assemblée nationale du Bénin",
-    auteur: "Ksperentos",
+    fichier: "ancb-benin.jpg",
+    titre: "Siège de l'Association nationale des communes du Bénin (ANCB) à Cotonou",
+    auteur: "Adoscam",
     licence: "CC BY-SA 4.0",
     page: "https://commons.wikimedia.org/wiki/File:Assembl%C3%A9e_Nationale_du_B%C3%A9nin.jpg",
   },

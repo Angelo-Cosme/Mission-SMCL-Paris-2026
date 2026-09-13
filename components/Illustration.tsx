@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { CREDITS } from "@/lib/contenu";
 
-/** Image d'illustration accompagnee de sa mention de licence. */
+/** Image d'illustration accompagnée de sa mention de licence. */
 export default function Illustration({
   fichier,
   alt,
@@ -25,8 +25,10 @@ export default function Illustration({
         width={largeur}
         height={hauteur}
         priority={priorite}
+        loading={priorite ? "eager" : "lazy"}
         sizes="(max-width: 860px) 100vw, 45vw"
       />
+
       {credit && (
         <figcaption>
           {credit.titre}. Photo {credit.auteur}, {credit.licence}.

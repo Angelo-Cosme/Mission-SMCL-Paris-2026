@@ -17,7 +17,7 @@ const ETIQUETTES: Record<string, string> = {
   qualite: "Qualité / fonction",
   telephone: "Téléphone mobile (WhatsApp)",
   courriel: "Adresse électronique officielle",
-  focal: "Focal technique (SG / DST)",
+  focal: "Focal technique (SE / DST)",
   cooperation: "Partenariat ou jumelage actif",
   cooperationPrecision: "Collectivités partenaires",
   domaines: "Domaines prioritaires",
