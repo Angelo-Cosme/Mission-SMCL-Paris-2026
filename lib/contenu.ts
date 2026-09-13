@@ -32,7 +32,7 @@ export const CONTACTS = {
     adresse: "42, avenue de la République – 93110 Rosny-sous-Bois",
     telephone: "+33 6 63 96 76 47",
     telephoneLien: "+33663967647",
-    courriel: "rsb.dacosta@gmail.com",
+    courriel: "juandjikpesse@gmail.com",
   },
 };
 
@@ -41,7 +41,6 @@ export const NAVIGATION = [
   { href: "/programme", libelle: "Programme" },
   { href: "/accompagnement", libelle: "Accompagnement" },
   { href: "/financements", libelle: "Financements" },
-  { href: "https://mediaproduct.fr/actus/salons-professionnels/le-salon-des-maires-smcl/", libelle: "Découvrir le salon" },
 ];
 
 export const RAIL = [
@@ -422,28 +421,28 @@ export type Credit = {
 export const CREDITS: Credit[] = [
   {
     fichier: "cotonou-panorama.jpg",
-    titre: "Vue panoramique du quartier Zongo à Cotonou au Bénin",
+    titre: "",
     auteur: "Adoscam",
     licence: "CC0",
     page: "https://commons.wikimedia.org/wiki/File:Vue_panoramique_du_quartier_Zongo_%C3%A0_Cotonou_au_B%C3%A9nin.jpg",
   },
   {
     fichier: "cotonou-cadjehoun.jpg",
-    titre: "Vue panoramique du quartier Cadjéhoun à Cotonou au Bénin",
+    titre: "",
     auteur: "Adoscam",
     licence: "CC BY-SA 4.0",
     page: "https://commons.wikimedia.org/wiki/File:Vue_panoramique_quartier_cadj%C3%A9houn-Cotonou_au_B%C3%A9nin_1.jpg",
   },
   {
     fichier: "quai-orsay.jpg",
-    titre: "Ministère français de l'Europe et des Affaires étrangères, quai d'Orsay",
+    titre: "",
     auteur: "Jebulon",
     licence: "CC0",
     page: "https://commons.wikimedia.org/wiki/File:Minist%C3%A8re_fran%C3%A7ais_des_Affaires_Etrang%C3%A8res_et_Europ%C3%A9ennes_Quai_d%27Orsay_Paris.jpg",
   },
   {
     fichier: "ancb-benin.jpg",
-    titre: "Siège de l'Association nationale des communes du Bénin (ANCB) à Cotonou",
+    titre: "",
     auteur: "Adoscam",
     licence: "CC BY-SA 4.0",
     page: "https://commons.wikimedia.org/wiki/File:Assembl%C3%A9e_Nationale_du_B%C3%A9nin.jpg",

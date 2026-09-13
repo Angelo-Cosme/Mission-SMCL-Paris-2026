@@ -26,7 +26,7 @@ de la mission, et un accusé de réception à la commune. Aucune dépendance npm
 
    ```
    RESEND_API_KEY=re_…
-   MAIL_DESTINATAIRE=rsb.dacosta@gmail.com
+   MAIL_DESTINATAIRE=juandjikpesse@gmail.com
    MAIL_EXPEDITEUR="Mission SMCL <inscription@votre-domaine.fr>"
    ```
 

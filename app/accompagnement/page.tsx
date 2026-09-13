@@ -3,6 +3,7 @@ import AppelInscription from "@/components/AppelInscription";
 import EnteteDePage from "@/components/EnteteDePage";
 import Illustration from "@/components/Illustration";
 import { ACCOMPAGNEMENT, CALENDRIER } from "@/lib/contenu";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Accompagnement",
@@ -24,6 +25,10 @@ export default function Accompagnement() {
         <div className="enveloppe">
           <h2 className="titre-section">{positionnement.titre}</h2>
           <p className="intro">{positionnement.texte}</p>
+
+          <Link className="bouton" target="_blank" href="https://mediaproduct.fr/actus/salons-professionnels/le-salon-des-maires-smcl/">
+              Découvrir le Salon
+            </Link>
 
           <div className="encadre mesure-large">
             <h3>{objectifs.titre}</h3>

@@ -4,7 +4,7 @@ import { FICHE, MISSION } from "@/lib/contenu";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const DESTINATAIRE = process.env.MAIL_DESTINATAIRE ?? "rsb.dacosta@gmail.com";
+const DESTINATAIRE = process.env.MAIL_DESTINATAIRE ?? "juandjikpesse@gmail.com";
 const EXPEDITEUR = process.env.MAIL_EXPEDITEUR ?? "Mission SMCL <onboarding@resend.dev>";
 const CLE = process.env.RESEND_API_KEY;
 
